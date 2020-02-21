@@ -57,8 +57,14 @@ public class HelloControllerTest {
                 get("/hello/dto")
                     .param("name", name)
                     .param("amount", String.valueOf(amount)))
+                    // API 테스트할 때 사용될 요청 파라미터를 설정합니다.
+                    // 단, 값은 String 만 허용됩니다.
+                    // 그래서 숫자/날짜 등의 데이터도 등록할 때는 문자열로 변경해야만 가능합니다.
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name", is(name)))
                 .andExpect(jsonPath("$.amount", is(amount)));
+                            // JSON 응답값을 필드별로 검증할 수 있는 메소드 입니다.
+                            // $를 기준으로 필드명을 명시함.
+                            // 여기서는 name 과 amount 를 검증하니 $.name , $.amount 로 검증합니다.
     }
 }
