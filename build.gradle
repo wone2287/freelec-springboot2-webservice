@@ -1,4 +1,4 @@
-buildscript {
+buildscript { // Gradle 스크립트에서 외부 라이브러리를 참조할 때 사용
     ext {
         springBootVersion = '2.1.7.RELEASE'
     }
@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") // class 를 찾기 위한 경로
     }
 }
 
@@ -30,5 +30,5 @@ dependencies {
     compile('org.projectlombok:lombok')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('com.h2database:h2')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.boot:spring-boot-starter-test') // 테스트 컴파일시 의존 라이브러리 Junit4
 }
