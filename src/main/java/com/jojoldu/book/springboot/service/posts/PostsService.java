@@ -5,7 +5,6 @@ import com.jojoldu.book.springboot.domain.posts.PostsRepository;
 import com.jojoldu.book.springboot.web.Dto.PostsResponseDto;
 import com.jojoldu.book.springboot.web.Dto.PostsSaveRequestDto;
 import com.jojoldu.book.springboot.web.Dto.PostsUpdateRequestDto;
-import javafx.geometry.Pos;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

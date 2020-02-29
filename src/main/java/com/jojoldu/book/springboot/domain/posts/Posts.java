@@ -21,7 +21,8 @@ public class Posts extends BaseTimeEntity {
 
     @Id
     // 해당 테이블의 PK 필드를 나타냅니다. ( Primary key )
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.Auto)
     // PK의 생성 규칙을 나타냅니다.
     // 스프링 부트 2.0 에서는 GenerationType.IDENTITY 옵션을 추가해야만 auto_increment 가 됩니다.
     // 스프링 부트 2.0 버전과 1.5 버전의 차이를 알아보자.
