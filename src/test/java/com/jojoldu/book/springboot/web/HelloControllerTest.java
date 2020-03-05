@@ -29,7 +29,6 @@ public class HelloControllerTest {
     // 스프링 MVC 테스트의 시작점
     // 이 클래스를 통해 HTTP GET, POST 등에 대한 API 테스트를 할 수 있음.
 
-
     @Test
     public void hello() throws Exception {
         String hello = "hello";

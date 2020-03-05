@@ -22,13 +22,13 @@ public class Posts extends BaseTimeEntity {
     @Id
     // 해당 테이블의 PK 필드를 나타냅니다. ( Primary key )
     // @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GeneratedValue(strategy = GenerationType.Auto)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     // PK의 생성 규칙을 나타냅니다.
     // 스프링 부트 2.0 에서는 GenerationType.IDENTITY 옵션을 추가해야만 auto_increment 가 됩니다.
     // 스프링 부트 2.0 버전과 1.5 버전의 차이를 알아보자.
     private Long id;
 
-    @Column(length = 500, nullable = false)
+    @Column(columnDefinition = "TEXT", length = 500, nullable = false)
     // 테이블의 칼럼을 나타내며 굳이 선언하지 않더라도 해당 클래스의 필드는 모두 컬럼이 됩니다.
     // 사용하는 이유는, 기본값 외에 추가로 변경이 필요한 옵션이 있으면 사용합니다.
     // 문자열의 경우 VARCHAR(255)가 기본 값인데, 사이즈를 500 으로 늘리고 싶거나 (ex:title)

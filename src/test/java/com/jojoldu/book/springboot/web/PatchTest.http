@@ -1,0 +1,9 @@
+PATCH http://localhost:8080/api/v1/posts/1
+Content-Type: application/json
+
+{
+  "title": "title_Fixed",
+  "content": "content_Fixed"
+}
+
+###
